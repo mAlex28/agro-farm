@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-weight: 300;
+    color: #111;
+    background: #c4c2c2;
+}
+
+
+/* navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgb(41, 187, 41);
+    box-shadow: 0 5px 20px rgba( 0, 0, 0, 05);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo {
+    color: #111;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 300;
+}
+
+header .navigation li a:hover {
+    color: rgba(255, 255, 255, 0.945);
+}
+
+/* contact form */
+section {
+    padding: 100px 80px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.formBx {
+    min-width: 80%;
+}
+
+.formBx form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.formBx form h3,
+.contactInfo h3 {
+   font-size: 20px;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+

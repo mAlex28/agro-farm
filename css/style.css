@@ -7,7 +7,7 @@
 }
 
 /* banner */
-p {
+body {
     font-weight: 300;
     color: #111;
 }
@@ -30,12 +30,12 @@ p {
 }
 
 .banner .content h2 {
-    font-size: 4em;
+    font-size: 3em;
     color: #fff;
 }
 
 .banner .content p {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #fff;
 }
 
@@ -71,7 +71,7 @@ header {
 }
 
 header.sticky {
-    background: rgb(117, 236, 117);
+    background: rgb(41, 187, 41);
     padding: 10px 100px;
     box-shadow: 0 5px 20px rgba( 0, 0, 0, 05);
 }
@@ -108,17 +108,19 @@ header.sticky .navigation li a{
 }
 
 header .navigation li a:hover {
-    color: rgba(41, 206, 69, 0.945);
+    color: rgba(56, 255, 6, 0.945);
 }
 
+header.sticky .navigation li a:hover{
+    color: #fff;
+}
 
 /* top products */
 .title {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
 }
 
 .products .content {
@@ -158,6 +160,46 @@ header .navigation li a:hover {
 .products .content .box .text h3{
     font-weight: 400;
     color: #111;
+}
+
+/* our services */
+.services {
+    background: #111;
+}
+
+.title.white {
+    color: #fff;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx {
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover {
+    background: rgb(35, 112, 5);
+}
+
+.services .content .servicesBx img {
+    max-width: 80px;
+    filter: invert(1);
+}
+
+.services .content .servicesBx h2 {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* about us */
@@ -207,5 +249,44 @@ section {
 }
 
 /* User comments */
+.testimonial {
+    background: #f7f7f7;
+}
+
+.testimonial .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial .content .testimonialBx {
+    max-width: calc(50% - 40px);
+    padding: 50px 20px;
+    margin: 20px;
+    background: #368601b7;
+}
+
+.testimonial .content .testimonialBx p {
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.testimonial .content .testimonialBx h3 {
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1em;
+}
+
+.testimonial .content .testimonialBx h3 span {
+    font-size: 14px;
+    font-weight: 400;
+}
 
 /* Footer */
+
+

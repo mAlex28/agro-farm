@@ -68,8 +68,14 @@ section {
     color: #111;
 }
 
+.content {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
 .formBx {
-    min-width: 80%;
+    min-width: 60%;
 }
 
 .formBx form {
@@ -96,3 +102,141 @@ section {
     resize: none;
 }
 
+.formBx form textarea {
+    min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
+    color: #999;
+}
+
+.formBx form input[type="submit"] {
+    max-width: 100px;
+    background: green;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contactInfo {
+    min-width: 40%;
+}
+
+.contactInfoBx {
+    position: relative;
+}
+
+.contactInfoBx .box {
+    position: fixed;
+    padding: 10px 0px;
+    display: flex;
+}
+
+.contactInfoBx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+
+
+.contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+#text {
+    margin-top: 10px;
+}
+
+.contactInfo .box .text h3 {
+    font-weight: 500;
+    color: rgb(14, 145, 14);
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width:991px) {
+
+    header {
+        padding: 10px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 60px);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(41, 187, 41);
+    }
+
+    header .navigation li {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    header .navigation li a {
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(/img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url(/img/close.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding: 100px 50px;
+    }
+
+    .content {
+        min-height: 40%;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactInfo {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width:600px) {
+    
+    section {
+        padding: 100px 20px;
+    }
+}

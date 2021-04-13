@@ -4,6 +4,7 @@ window.addEventListener('scroll', function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 })
 
+// toggle menu
 function toggleMenu(){
     const menuToggle = document.querySelector('.menuToggle');
     const navigation = document.querySelector('.navigation');

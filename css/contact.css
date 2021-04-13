@@ -198,7 +198,7 @@ section {
         position: relative;
         width: 40px;
         height: 40px;
-        background: url(/img/menu.png);
+        background: url(/img/menudark.png);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
@@ -206,7 +206,7 @@ section {
     }
 
     .menuToggle.active {
-        background: url(/img/close.png);
+        background: url(/img/closedark.png);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;

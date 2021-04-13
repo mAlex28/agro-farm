@@ -41,7 +41,6 @@
                             <a href="news.html" class="nav-link">News</a>
                         </li>
                         <li class="nav-item">  -->
-                           <!-- //TODO #1 create a dropdown menu. view profile and logout and contact -->
                             <!-- <a href="account.html" class="nav-link">John Smith</a>
                         </li>
                         <li class="nav-item">
@@ -65,13 +64,25 @@
         <a href="" class="logo">AgroFarm</a>
         <div class="menuToggle" onclick="toggleMenu();"></div>
         <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
+            <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+         <!-- //TODO #1 create a dropdown menu. view profile and logout and contact -->
+            <li><a href="contact.html" onclick="toggleMenu();">JohnSmith</a></li>
+            <li><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-cart-plus"></i></a></li>
         </ul>
     </header>
+
+    <!-- Banner -->
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Fresh & Healthy.</h2>
+            <p>We encourage our farmers to produce the best and deliver them to your door steps</p>
+            <a href="products.html" class="btn" id="joinBtn">Explore</a>
+        </div>
+    </section>
+
+   
     
     <!-- script files -->
     <script>

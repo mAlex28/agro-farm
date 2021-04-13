@@ -346,12 +346,8 @@ section {
         filter: invert(1);
     }
 
-    .about {
-        padding: 10px;
-    }
-
-    .services {
-        padding: 10px;
+    section {
+        padding: 20px;
     }
 
     .banner .content h2 {

@@ -1,10 +1,11 @@
-* {
+*, 
+*::before, 
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
+    box-sizing: inherit;
 }
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -22,6 +23,15 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 500;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
 }
 
 a {
@@ -50,7 +60,6 @@ a {
     }
 }
 
-
 /* banner */
 body {
     font-weight: 300;
@@ -64,7 +73,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/img/banner.jpeg);
+    background: url(../img/banner.jpeg);
     background-size: cover;
     
 }
@@ -160,7 +169,82 @@ header.sticky .navigation li a:hover{
     color: #fff;
 }
 
-/* top products */
+/* Responsive */
+@media (max-width:991px) {
+
+    header, header.sticky {
+        padding: 10px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 60px);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(41, 187, 41);
+    }
+
+    header .navigation li {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    header .navigation li a {
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(../img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url(../img/close.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .banner .content h2 {
+        font-size: 3em;
+        color: #fff;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .banner .content h2 {
+        font-size: 2.2em;
+        color: #fff;
+    }
+}
+
+
+/* Top products */
 .title {
     margin: 4rem 0 7rem 0;
     text-align: center;
@@ -292,10 +376,11 @@ header.sticky .navigation li a:hover{
 }
 
 
-
 /* our services */
 .services {
     background: #111;
+    padding-top: 5px;
+    /* padding-bottom: 10px; */
 }
 
 .title.white {
@@ -334,8 +419,7 @@ header.sticky .navigation li a:hover{
 }
 
 /* about us */
-section {
-    /* padding-top: 50px; */
+.about{
     padding: 50px 100px;
 }
 
@@ -382,6 +466,7 @@ section {
 /* User comments */
 .testimonial {
     background: #f7f7f7;
+    padding: 5px 100px;
 }
 
 .testimonial .content {
@@ -458,71 +543,14 @@ section {
     margin-bottom: 1rem;
 }
 
-
-/* Responsive */
 @media (max-width:991px) {
-
-    header, header.sticky {
-        padding: 10px 20px;
-    }
-
-    header .navigation {
-        display: none;
-    }
-
-    header .navigation.active {
-        width: 100%;
-        height: calc(100% - 60px);
-        position: fixed;
-        top: 60px;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: rgb(41, 187, 41);
-    }
-
-    header .navigation li {
-        list-style: none;
-        margin-left: 0;
-    }
-
-    header .navigation li a {
-        color: #111;
-        font-size: 1.6em;
-    }
-
-    .menuToggle {
-        position: relative;
-        width: 40px;
-        height: 40px;
-        background: url(/img/menu.png);
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-    }
-
-    .menuToggle.active {
-        background: url(/img/close.png);
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    header.sticky .menuToggle {
-        filter: invert(1);
-    }
-
-    section {
+    .about {
         padding: 20px;
     }
 
-    .banner .content h2 {
-        font-size: 3em;
-        color: #fff;
-    }
+    .testimonial {
+        padding: 10px 10px;
+    } 
 
     .row {
         flex-direction: column;
@@ -542,9 +570,8 @@ section {
         margin: 20px;
     }
 
-
     .testimonial .content .testimonialBx {
-        max-width: calc(100% - 20px);
+        max-width: calc(100% - 10px);
         padding: 40px 20px;
         margin: 10px;
         background: #368601b7;
@@ -554,15 +581,6 @@ section {
         margin-top: 20px;
     }
 }
-
-@media (max-width: 480px) {
-
-    .banner .content h2 {
-        font-size: 2.2em;
-        color: #fff;
-    }
-}
-
 
 @media only screen and (max-width: 998px) {
     .footer-container {

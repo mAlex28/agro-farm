@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/cus_contact.css">
+    <link href="../icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/brands.min.css" rel="stylesheet">
+</head>
+<body>
+        <!-- Navigation -->
+        <header>
+            <a href="" class="logo">AgroFarm</a>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+                <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
+                <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+                <li class="dropdown">
+                    <a href="contact.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="../index.html">Logout</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </li>
+                <li><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+        </header>
+
+    <!-- contact form -->
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2>Contact Us</h2>
+            <p>Have a question or a suggestion?</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3 style="margin-bottom: 20px;">Contact Info</h3>
+                <div class="contactInfoBox" >
+                    <div class="box" style="margin-bottom: 20px;">
+                        <div class="icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="text" id="text">
+                            <h3>Address</h3>
+                            <p>221B Baker Street,<br>Colombo 07,<br>11850</p>
+                        </div>
+                    </div>
+                    <div class="box" style="margin-bottom: 20px;">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text" id="text">
+                            <h3>Phone</h3>
+                            <p>011-254-7064</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="text" id="text">
+                            <h3>Email</h3>
+                            <p>agrofarmersofficial@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Message Us</h3>
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <script>
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active'); 
+        }
+    </script>
+</body>
+</html>
+

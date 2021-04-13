@@ -6,9 +6,9 @@
     <title>AgroFarm</title>
     <link rel="stylesheet" href="../css/customer.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link href="/icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
-    <link href="/icons-fontawesome/css/solid.min.css" rel="stylesheet">
-    <link href="/icons-fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/brands.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,8 +19,14 @@
             <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
             <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
             <li><a href="news.html" onclick="toggleMenu();">News</a></li>
-         <!-- //TODO #1 create a dropdown menu. view profile and logout and contact -->
-            <li><a href="contact.html" onclick="toggleMenu();">JohnSmith</a></li>
+            <li class="dropdown">
+                <a href="contact.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
+                <div class="dropdown-content">
+                    <a href="profile.html">Profile</a>
+                    <a href="../index.html">Logout</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
             <li><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-shopping-cart"></i></a></li>
         </ul>
     </header>

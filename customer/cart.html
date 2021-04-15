@@ -1,0 +1,197 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFarm</title>
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link href="../icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/brands.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <a href="" class="logo">AgroFarm</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
+            <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+            <li class="dropdown">
+                <a href="contact.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
+                <div class="dropdown-content">
+                    <a href="profile.html">Profile</a>
+                    <!-- // TODO #3 logout confirmation box to every login navigation bar -->
+                    <a href="../index.html">Logout</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </header>
+
+    <!-- Cart Items -->
+    <div class="container-md cart">
+        <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+            <div class="cart-info">
+                <img src="../img/cabbage.jpeg" alt="">
+                <div>
+                <p>Cabbage - 1kg</p>
+                <span>Price: Rs160.00</span>
+                <br />
+                <a href="#">remove</a>
+                </div>
+            </div>
+            </td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>160.00</td>
+        </tr>
+        <tr>
+            <td>
+            <div class="cart-info">
+                <img src="../img/milk-bottle.jpeg" alt="">
+                <div>
+                <p>Sterilized milk - 250ml</p>
+                <span>Price: Rs85.00</span>
+                <br />
+                <a href="#">remove</a>
+                </div>
+            </div>
+            </td>
+            <td><input type="number" value="4" min="1"></td>
+            <td>85.00</td>
+        </tr>
+        <tr>
+            <td>
+            <div class="cart-info">
+                <img src="../img/rice.jpeg" alt="">
+                <div>
+                <p>Basmati Rice White - 1kg</p>
+                <span>Price: Rs325.00</span>
+                <br />
+                <a href="#">remove</a>
+                </div>
+            </div>
+            </td>
+            <td><input type="number" value="3" min="1"></td>
+            <td>325.00</td>
+        </tr>
+        <tr>
+            <td>
+            <div class="cart-info">
+                <img src="../img/carrot.jpeg" alt="">
+                <div>
+                <p>Carrot - 1kg</p>
+                <span>Price: Rs190.00</span>
+                <br />
+                <a href="#">remove</a>
+                </div>
+            </div>
+            </td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>190.00</td>
+        </tr>
+        <tr>
+            <td>
+            <div class="cart-info">
+                <img src="../img/coconut.jpeg" alt="">
+                <div>
+                <p>Coconut</p>
+                <span>Price: Rs73.00</span>
+                <br />
+                <a href="#">remove</a>
+                </div>
+            </div>
+            </td>
+            <td><input type="number" value="2" min="1"></td>
+            <td>73.00</td>
+        </tr>
+        </table>
+
+        <div class="total-price">
+        <table>
+            <tr>
+            <td>Subtotal</td>
+            <td>860</td>
+            </tr>
+            <tr>
+            <td>Delivery Charge</td>
+            <td>150</td>
+            </tr>
+            <tr>
+            <td>Total</td>
+            <td>Rs 1010</td>
+            </tr>
+        </table>
+        <a href="payment.html" class="checkout btn">Proceed To Checkout</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer-container">
+            <div class="footer-center">
+                <h3>EXTRAS</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="news.html">News</a>
+                <a href="#">Offers</a>
+            </div>
+            <div class="footer-center">
+                <h3>INFORMATION</h3>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-center">
+                <h3>MY ACCOUNT</h3>
+                <a href="#">My Account</a>
+                <a href="#">Order History</a>
+                <a href="#">Wish List</a>
+                <a href="#">Newsletter</a>
+            </div>
+            <div class="footer-center">
+                <h3>CONTACT US</h3>
+                <div>
+                <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                </span>
+                221B Baker Street, Colombo 07, 11850
+                </div>
+                <div>
+                <span>
+                    <i class="fas fa-envelope"></i>
+                </span>
+                agrofarmersofficial@gmail.com
+                </div>
+                <div>
+                <span>
+                    <i class="fas fa-phone"></i>
+                </span>
+                011-254-7064
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- script files -->
+    <script src="../js/navbar.js"></script>
+
+</body>
+</html>

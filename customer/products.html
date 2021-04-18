@@ -20,7 +20,7 @@
             <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
             <li><a href="news.html" onclick="toggleMenu();">News</a></li>
             <li class="dropdown">
-                <a href="contact.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
+                <a href="profile.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
                 <div class="dropdown-content">
                     <a href="profile.html">Profile</a>
                     <!-- // TODO #3 logout confirmation box to every login navigation bar -->
@@ -31,7 +31,29 @@
             <li><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-shopping-cart"></i></a></li>
         </ul>
     </header>
-                    <!-- // TODO #2 add search bar with category -->
+    
+    <!-- Search box -->
+    <section class="search">
+        <div class="wrapper">
+            <div class="search-box">
+                <div class="dropdown">
+                    <div class="default-option">All</div>
+                    <ul id="categ">
+                        <li>All</li>
+                        <li>Vegetables</li>
+                        <li>Fruits</li>
+                        <li>Grains</li>
+                        <li>Dairy products</li>
+                        <li>Other</li>                  
+                    </ul>
+                </div>
+                <div class="search-field">
+                    <input type="text" class="input" placeholder="Search">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- All Products -->
     <section class="section all-products" id="products">
@@ -515,6 +537,7 @@
 
     <!-- script files -->
     <script src="../js/navbar.js"></script>
+    <script src="../js/customer.js"></script>
 
 </body>
 </html>

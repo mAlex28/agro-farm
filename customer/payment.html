@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFarm</title>
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link href="../icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/brands.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <a href="" class="logo">AgroFarm</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
+            <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+            <li class="dropdown">
+                <a href="contact.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
+                <div class="dropdown-content">
+                    <a href="profile.html">Profile</a>
+                    <!-- // TODO #3 logout confirmation box to every login navigation bar -->
+                    <a href="../index.html">Logout</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </header>
+
+    <!-- Checkout form -->
+    <section class="payment">
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-58">
+                                <h3>Billing Address</h3>
+                                <label for="fname"><i class="fa fa-user"></i>Full Name</label>
+                                <input type="text" id="fname" name="fullname" placeholder="John Smith">
+    
+                                <label for="email"><i class="fa fa-envelope"></i>Email</label>
+                                <input type="email" id="email" name="email" placeholder="JohnSmith@example.com">
+    
+                                <label for="adr"><i class="fa fa-address-card"></i>Address</label>
+                                <input type="text" id="adr" name="address" placeholder="425 Walker Street">
+    
+                                <label for="city"><i class="fa fa-university"></i>City</label>
+                                <input type="text" id="city" name="city" placeholder="Colombo 07">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="province">Province</label>
+                                        <input type="text" id="province" name="province" placeholder="Western">             
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" id="zip" name="zip" placeholder="11870">             
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3>Payment</h3>
+                                <label for="fname">Accepted Cards</label>
+                                <div class="icon-container">
+                                    <i class="fab fa-cc-visa" style="color: navy;"></i>
+                                    <i class="fab fa-cc-amex" style="color: blue;"></i>
+                                    <i class="fab fa-cc-mastercard" style="color: red;"></i>
+                                    <i class="fab fa-cc-discover" style="color: orange;"></i>
+                                </div>
+                                <label for="cname">Name on card</label>
+                                <input type="text" id="cname" name="cardname" placeholder="John Smith">
+
+                                <label for="cnum">Card Number</label>
+                                <input type="text" id="cnum" name="cardnumber" placeholder="4568-7890-8323-4444">
+
+                                <label for="expmonth">Name on card</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="11/23">
+                                
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="expyear" name="cvv" placeholder="728">
+                                    </div>
+                                </div>
+                            </div>
+                            <label>
+                                <input type="checkbox" name="checked" id="sameadr">Shipping address same ad the billing
+                            </label>
+                            <input type="submit" value="Checkout" class="checkoutBtn">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-25">
+                <div class="container">
+                    <h4>Card</h4> <span class="price"></span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer-container">
+            <div class="footer-center">
+                <h3>EXTRAS</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="news.html">News</a>
+                <a href="#">Offers</a>
+            </div>
+            <div class="footer-center">
+                <h3>INFORMATION</h3>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-center">
+                <h3>MY ACCOUNT</h3>
+                <a href="#">My Account</a>
+                <a href="#">Order History</a>
+                <a href="#">Wish List</a>
+                <a href="#">Newsletter</a>
+            </div>
+            <div class="footer-center">
+                <h3>CONTACT US</h3>
+                <div>
+                <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                </span>
+                221B Baker Street, Colombo 07, 11850
+                </div>
+                <div>
+                <span>
+                    <i class="fas fa-envelope"></i>
+                </span>
+                agrofarmersofficial@gmail.com
+                </div>
+                <div>
+                <span>
+                    <i class="fas fa-phone"></i>
+                </span>
+                011-254-7064
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- script files -->
+    <script src="../js/navbar.js"></script>
+    
+    </body>
+    </html>

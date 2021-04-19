@@ -995,6 +995,7 @@ form span {
   text-transform: uppercase;
   padding: 13px 15px;
   font-size: 14px;
+  user-select: none;
 }
 
 .wrapper .search-box .dropdown ul {
@@ -1010,10 +1011,12 @@ form span {
 
 .wrapper .search-box .dropdown ul li {
   padding-bottom: 20px;
+  user-select: none;
 }
 
 .wrapper .search-box .dropdown #categ.active{
   display: block;
+  z-index: 1;
 }
 
 .wrapper .search-box .dropdown ul li:last-child {
@@ -1068,4 +1071,19 @@ form span {
 
 ::-ms-input-placeholder {
   color: #9fa3b1;
+}
+
+/* user comments */
+.user-comments {
+  margin-left: 100px;
+}
+.user-comments h1{
+  font-size: 15px;
+}
+
+
+/* payment */
+.payment {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }

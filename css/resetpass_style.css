@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* navigation */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  background: rgb(41, 187, 41);
+  box-shadow: 0 5px 20px rgba( 0, 0, 0, 05);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header .logo {
+  color: #111;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navigation li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 300;
+}
+
+header .navigation li a:hover {
+  color: rgba(255, 255, 255, 0.945);
+}
+
+
+.containerr {
+  position: relative;
+  background-color:#ffff;
+  width: 90%;
+
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.forgot-container {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  top: 0;
+  left: 0;
+}
+
+.forgot-password {
+  position: absolute;
+  top: 50%;
+  /*transform: translate(-50%, -50%); */
+  left: 75%;
+  width: 50%;
+ /* transition: 1s 0.7s ease-in-out; */
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+.title1 {
+  font-size: 2.2rem;
+  color:#444;;
+  margin-bottom: 10px;
+}
+.input-field{
+  max-width: 270px;
+  width: 90%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 50px;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 10% 80%;
+  padding: 0 0.2rem; 
+  position: relative;
+}
+
+.input-field1 i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field1 input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 0.5;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field1 input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+
+.btn {
+  width: 150px;
+  background-color:rgb(38,185,41);
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color:  #20dbc2;  
+}
+
+.panels-containerr {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.containerr:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-60%);
+  background-image: linear-gradient(-45deg, rgb(41,187,41) 0%, rgb(41,187,41) 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 60%;
+  z-index: 5;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+
+/* Responsive */
+@media (max-width:991px) {
+
+  header {
+      padding: 10px 20px;
+  }
+
+  header .navigation {
+      display: none;
+  }
+
+  header .navigation.active {
+      width: 100%;
+      height: calc(100% - 60px);
+      position: fixed;
+      top: 60px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: rgb(41, 187, 41);
+  }
+
+  header .navigation li {
+      list-style: none;
+      margin-left: 0;
+  }
+
+  header .navigation li a {
+      color: #111;
+      font-size: 1.6em;
+  }
+
+  .menuToggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background: url(/img/menudark.png);
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+  }
+
+  .menuToggle.active {
+      background: url(/img/closedark.png);
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+  header.sticky .menuToggle {
+      filter: invert(1);
+  }
+
+  section {
+      padding: 100px 50px;
+  }
+
+  .content {
+      min-height: 40%;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .contactInfo {
+      margin-bottom: 30px;
+  }
+
+}

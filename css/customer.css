@@ -961,16 +961,10 @@ form span {
 }
 
 /* Search box */
-.search {
-  padding-top: 100px;
-}
 .wrapper {
+  padding-top: 100px;
+  padding-left: 30%;
   position: relative;
-  left: 50%;
-  transform: translate(-20%);
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%); */
 }
 
 .wrapper .search-box {
@@ -986,7 +980,7 @@ form span {
 .wrapper .search-box .dropdown {
   width: 150px;
   border-right: 2px solid #a7a7a7;
-  color: #9fa3b1;
+  color: #000000;
   position: relative;
   cursor: pointer;
 }
@@ -1003,7 +997,7 @@ form span {
   position: absolute;
   top: 70px;
   left: -10px;
-  background: rgb(75, 72, 72);
+  background: gainsboro;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 8px 8px 6px -10px #b3c6ff;
@@ -1024,7 +1018,7 @@ form span {
 }
 
 .wrapper .search-box .dropdown ul li:hover {
-  color: #ddd9d9;
+  color: rgb(5, 145, 51);
 }
 
 .wrapper .search-box .dropdown::before {
@@ -1060,6 +1054,38 @@ form span {
   color: #309104;
   cursor: pointer;
 } 
+
+.search-field .autocom-box{
+  padding: 0px;
+  max-height: 280px;
+  overflow-y: auto;
+  background: gainsboro;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-field.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-field .autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  display: none;
+}
+
+.search-field.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: aliceblue;
+}
 
 ::-webkit-input-placeholder {
   color: #9fa3b1;

@@ -66,7 +66,7 @@
 	background-color:#FFFFFF;
 }
 
-#comments form {
+#comments .form {
 	margin-bottom:30px;
 }
 
@@ -82,17 +82,17 @@
     
 } */
 
-#comments form fieldset {
+#comments .form fieldset {
 	clear:both;
 }
 
-#comments form textarea {
+#comments .form textarea {
 	height:100px;
     resize: none;
     width: 600px;
 }
 
-#comments .media {
+#comments .media .media-body{
 	border-top:1px dashed #DDDDDD;
 	padding:20px 0;
 	margin:0;

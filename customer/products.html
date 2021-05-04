@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroFarm</title>
     <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link href="../icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="../icons-fontawesome/css/solid.min.css" rel="stylesheet">
@@ -24,7 +25,24 @@
                 <div class="dropdown-content">
                     <a href="profile.html">Profile</a>
                     <!-- // TODO #3 logout confirmation box to every login navigation bar -->
-                    <a href="../index.html">Logout</a>
+                    <a id="myBtn">Logout</a>
+                        <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">&times;</span>
+                                        <h2>Logout</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="/img/enter.png" alt="">
+                                        <p>You sure you want to logout?</p> <br>
+                                    <a id="button" href="/index.html">Logout</a>
+                                        
+                                    </div>
+                                </div>
+                            
+                            </div>
                     <a href="contact.html">Contact</a>
                 </div>
             </li>
@@ -539,6 +557,7 @@
     <script src="../js/customer.js"></script>
     <script src="../js/search_suggesions.js"></script>
     <script src="../js/cart.js"></script>
+    <script src="../js/popup.js"></script>
 
 </body>
 </html>

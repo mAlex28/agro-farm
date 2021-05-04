@@ -15,13 +15,13 @@ let products = [
     },
     {
         name: "Sterillized Milk",
-        tag: "milk",
+        tag: "milk-bottle",
         price: 85,
         inCart:0
     },
     {
         name: "Chilli Powder",
-        tag: "chilli",
+        tag: "chili-powder",
         price: 116,
         inCart:0
     },
@@ -105,7 +105,6 @@ function setItems(product) {
 function totalCost(product) {
     let cartCost = localStorage.getItem('totalCost');
    
-
     console.log("my cart cost", cartCost);
     console.log(typeof cartCost);
 
@@ -115,8 +114,60 @@ function totalCost(product) {
     } else {
         localStorage.setItem("totalCost", product.price);
     }
-
-
 }
 
-onLoadCartNumbers()
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".cart-product-container");
+    let totPriceContainer = document.querySelector(".total-price");
+    let cartCost = localStorage.getItem('totalCost');
+
+
+    if(cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        // totPriceContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <tr>
+            <td>
+            <div class="cart-info">
+                <img src="/img/${item.tag}.jpeg" alt="pic">
+                <div>
+                <p>${item.name} - 1kg</p>
+                <span>Price: Rs160.00</span>
+                <br />
+                <a href="#">remove</a>
+                </div>
+            </div>
+            </td>
+            <td><input type="number" value="${item.inCart}" min="1"></td>
+            <td>Rs.${item.price * item.inCart}.00</td>
+        </tr>
+        `       
+        });
+
+        totPriceContainer.innerHTML = `
+        <table>
+            <tr>
+            <td>Subtotal</td>
+            <td>${cartCost}</td>
+            </tr>
+            <tr>
+            <td>Delivery Charge</td>
+            <td>0</td>
+            </tr>
+            <tr>
+            <td>Total</td>
+            <td>Rs.${cartCost}.00</td>
+            </tr>
+        </table>
+        <a href="payment.html" class="checkout btn">Proceed To Checkout</a>
+        `;
+        
+    }
+}
+
+
+onLoadCartNumbers();
+displayCart();

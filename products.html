@@ -1,0 +1,563 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFarm</title>
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link href="../icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../icons-fontawesome/css/brands.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <a href="" class="logo">AgroFarm</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
+            <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+            <li class="dropdown">
+                <a href="profile.html" onclick="toggleMenu();" class="dropBtn"><b>JohnSm123</b></a>
+                <div class="dropdown-content">
+                    <a href="profile.html">Profile</a>
+                    <!-- // TODO #3 logout confirmation box to every login navigation bar -->
+                    <a id="myBtn">Logout</a>
+                        <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">&times;</span>
+                                        <h2>Logout</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="/img/enter.png" alt="">
+                                        <p>You sure you want to logout?</p> <br>
+                                    <a id="button" href="/index.html">Logout</a>
+                                        
+                                    </div>
+                                </div>
+                            
+                            </div>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li class="cartCount"><a href="cart.html" onclick="toggleMenu();"><i class="fa fa-shopping-cart"></i> <span>0</span></a></li>
+        </ul>
+    </header>
+
+    <!-- All Products -->
+    <section class="section all-products" id="products">
+        <div class="wrapper">
+            <div class="search-box">
+                <div class="dropdown">
+                    <div class="default-option">All</div>
+                    <ul id="categ">
+                        <li>All</li>
+                        <li>Vegetables</li>
+                        <li>Fruits</li>
+                        <li>Grains</li>
+                        <li>Dairy products</li>
+                        <li>Other</li>                  
+                    </ul>
+                </div>
+                <div class="search-field">
+                    <input type="text" class="input" placeholder="Search">
+                    <div class="autocom-box">
+            
+                    </div>
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="top container">
+            <h1>All Products</h1>
+            <form>
+                <select>
+                    <option value="1">Defualt Sorting</option>
+                    <option value="2">Sort By Price</option>
+                    <option value="3">Sort By Popularity</option>
+                    <option value="4">Sort By Sale</option>
+                    <option value="5">Sort By Rating</option>
+                </select>
+                <span><i class='fa fa-chevron-down'></i></span>
+            </form>
+        </div>
+
+        <div class="product-center container">
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/rice.jpeg" alt="an image of a rice bag">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Basmathi Rice White - 1 kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4 class="price">Rs 325.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/tea.jpeg" alt="an image of tea powder">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Ceylon Black Tea - 200g</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <h4 class="price">Rs 230.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/milk-bottle.jpeg" alt="an image of a milk-bottle">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Sterilized Milk - 250ml</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <h4 class="price">Rs 85.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/chili-powder.jpeg" alt="an image of chili-poweder">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Chilli Powder - 100g</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 116.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/carrot.jpeg" alt="an image of carrots">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Carrot - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 190.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/tomato.jpeg" alt="an image of tomatoes">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Tomato - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 140.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/cabbage.jpeg" alt="an image of a cabbage">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Cabbage - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 160.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/coconut.jpeg" alt="an image of a coconut">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Coconut - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 73.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/rice.jpeg" alt="an image of a rice bag">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Basmathi Rice White - 1 kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4 class="price">Rs 325.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/tea-powder.jpeg" alt="an image of tea powder">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Ceylon Black Tea - 200g</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <h4 class="price">Rs 230.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/milk-bottle.jpeg" alt="an image of a milk-bottle">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Sterilized Milk - 250ml</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <h4 class="price">Rs 85.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/chili-powder.jpeg" alt="an image of chili-poweder">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Chilli Powder - 100g</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 116.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/carrot.jpeg" alt="an image of carrots">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Carrot - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 190.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/tomato.jpeg" alt="an image of tomatoes">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Tomato - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 140.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/cabbage.jpeg" alt="an image of a cabbage">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Cabbage - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 160.00</h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-header">
+                    <img src="../img/coconut.jpeg" alt="an image of a coconut">
+                    <ul class="icons">
+                        <span><i class="fa fa-heart"></i></span>
+                        <span><i class="add-cart fa fa-shopping-cart"></i></span>
+                        <span><i class="fa fa-search"></i></span>
+                    </ul>
+                </div>
+                <div class="product-footer">
+                    <a href="productdetail.html">
+                        <h3>Coconut - 1kg</h3>
+                    </a>
+
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+
+                    <h4 class="price">Rs 73.00</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pagination">
+        <div class=" container">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span><i class='fa fa-arrow-right'></i></span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-center">
+              <h3>EXTRAS</h3>
+              <a href="index.html">Home</a>
+              <a href="products.html">Products</a>
+              <a href="news.html">News</a>
+              <a href="#">Offers</a>
+            </div>
+            <div class="footer-center">
+              <h3>INFORMATION</h3>
+              <a href="#">About Us</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-center">
+              <h3>MY ACCOUNT</h3>
+              <a href="#">My Account</a>
+              <a href="#">Order History</a>
+              <a href="#">Wish List</a>
+              <a href="#">Newsletter</a>
+            </div>
+            <div class="footer-center">
+              <h3>CONTACT US</h3>
+              <div>
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                221B Baker Street, Colombo 07, 11850
+              </div>
+              <div>
+                <span>
+                  <i class="fas fa-envelope"></i>
+                </span>
+                agrofarmersofficial@gmail.com
+              </div>
+              <div>
+                <span>
+                  <i class="fas fa-phone"></i>
+                </span>
+                011-254-7064
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- script files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/customer.js"></script>
+    <script src="../js/search_suggesions.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/popup.js"></script>
+
+</body>
+</html>

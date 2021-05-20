@@ -1,11 +1,32 @@
-<html>
+<html lang="en">
 <head>
-<link href="/css/style1.css" rel="stylesheet" type="text/css"/>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFarm</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="./icons-fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="./icons-fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="./icons-fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/css/style1.css" rel="stylesheet" type="text/css"/>
 </head>
-<body style="background-color:#E3F2FD ;">
-<h1><u><center>F.A.Q</center></u></h1>
-<p> </p>
+<body>
+    <header>
+        <a href="" class="logo">AgroFarm</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="login.html" onclick="toggleMenu();">Login</a></li>
+            <li><a href="products.html" onclick="toggleMenu();">Products</a></li>
+            <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+            <li><a href="contact.html" onclick="toggleMenu();">Contact</a></li>
+            <li><a href="faq.html" onclick="toggleMenu();">FAQ</a></li>
+        </ul>
+    </header>
+    
+   <section style="background-color:#E3F2FD ;">
+    <h1><u><center>F.A.Q</center></u></h1>
+    <p> </p>
 <div class="content" id="first"><b><center>What is farming?</center></b><br>
 According to the Dictionary definition, “Farming is the act or process of working the ground, planting seeds, and growing edible plants. You can also describe raising animals for milk or meat as farming… Farming is a great way to describe the lifestyle and work of people whose jobs are in the agriculture industry.” The noun “farm,” which derives from the Medieval Latin Firma, originally meant, “A lease on farm land.”
 </div>
@@ -19,5 +40,10 @@ Sometimes referred to as soil quality, soil health is the continued ability of s
 </div>
 <div class="content" id="fourth"><b><center>How many farms are there in the world?</center></b><br>
 There are more than 570 million farms worldwide, with over 90% of them being run by an individual or a family. Family farms produce around 80% of the world’s food & others are produced by company owned farms.</div>
+
+   </section>
+       
+    
+    <script src="./js/script.js"></script>
 </body>
 </html>

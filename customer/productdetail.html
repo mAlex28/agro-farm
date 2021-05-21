@@ -112,13 +112,26 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima delectus nulla voluptates nesciunt
             quidem laudantium, quisquam voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!</p>
 
-            <div class="msgFarmer">
+            <!-- <div class="msgFarmer">
                 <i class="fa fa-envelope"></i>
-                <a href="#">Message</a>
-            </div>
+               
+            </div> -->
         </div>
         </div>
     </section>
+
+    <button class="open-button" onclick="openForm()">Message</button>
+    <div class="chat-popup" id="myForm">
+        <form action="" class="form-container">
+          <h1>Chat</h1>
+      
+          <label for="msg"><h3><b>Message</b></h3</label>
+          <textarea placeholder="Write Your message Here.." name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
 
     <!-- user comments -->
     <!-- <section class="section user-comments">
@@ -327,5 +340,14 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/customer.js"></script>
     <script src="../js/comment.js"></script>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
 </body>
 </html>
